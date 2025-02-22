@@ -1,8 +1,8 @@
 namespace WFNovo
 {
-    public partial class Form1 : Form
+    public partial class FrmLogin : Form
     {
-        public Form1()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -34,6 +34,20 @@ namespace WFNovo
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string username = txtNome.Text.Trim();
+            string password = txtSenha.Text.Trim();
+
+            if (username != string.Empty && password != string.Empty)
+            {
+                FrmCadastro frmCadastro = new FrmCadastro();
+                frmCadastro.ShowDialog();
+
+            }
+            else
+            {
+
+                MessageBox.Show(" Os campos não podem esta vazios", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

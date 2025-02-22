@@ -1,6 +1,6 @@
 ﻿namespace WFNovo
 {
-    partial class Form1
+    partial class FrmLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,8 +32,8 @@
             btnCliqueAqui = new Button();
             lblNome1 = new Label();
             lblPassword = new Label();
-            Nome = new TextBox();
-            Senha = new TextBox();
+            txtNome = new TextBox();
+            txtSenha = new TextBox();
             btnLogin = new Button();
             SuspendLayout();
             // 
@@ -78,19 +78,20 @@
             lblPassword.TabIndex = 2;
             lblPassword.Text = "Password:";
             // 
-            // Nome
+            // txtNome
             // 
-            Nome.Location = new Point(109, 135);
-            Nome.Name = "Nome";
-            Nome.Size = new Size(100, 23);
-            Nome.TabIndex = 3;
+            txtNome.Location = new Point(109, 135);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(100, 23);
+            txtNome.TabIndex = 3;
             // 
-            // Senha
+            // txtSenha
             // 
-            Senha.Location = new Point(109, 172);
-            Senha.Name = "Senha";
-            Senha.Size = new Size(100, 23);
-            Senha.TabIndex = 3;
+            txtSenha.Location = new Point(109, 172);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
+            txtSenha.Size = new Size(100, 23);
+            txtSenha.TabIndex = 3;
             // 
             // btnLogin
             // 
@@ -106,20 +107,20 @@
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
-            // Form1
+            // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(505, 429);
-            Controls.Add(Nome);
+            Controls.Add(txtNome);
             Controls.Add(btnLogin);
-            Controls.Add(Senha);
+            Controls.Add(txtSenha);
             Controls.Add(lblPassword);
             Controls.Add(lblNome1);
             Controls.Add(btnCliqueAqui);
             Controls.Add(LblNome);
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            Name = "Form1";
+            Name = "FrmLogin";
             Text = "  ";
             Load += Form1_Load;
             ResumeLayout(false);
@@ -132,8 +133,8 @@
         private Button btnCliqueAqui;
         private Label lblNome1;
         private Label lblPassword;
-        private TextBox Nome;
-        private TextBox Senha;
+        private TextBox txtNome;
+        private TextBox txtSenha;
         private Button btnLogin;
     }
 }
